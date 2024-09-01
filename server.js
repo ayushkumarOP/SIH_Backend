@@ -3,6 +3,7 @@ const cors = require('cors')
 const morgan = require('morgan')
 const dotenv = require('dotenv');
 const userRoute = require("./routes/userRoute");
+const invoiceRoute = require("./routes/InvoiceRoute");
 const connectDb = require('./config/connectDb'); 
 //config dot env file
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(cors())
 
 //user routes
 app.use("/api/users", userRoute);
+app.use("/api/invoice", invoiceRoute);
 
 //port
 const PORT = 8080 || process.env.PORT;
