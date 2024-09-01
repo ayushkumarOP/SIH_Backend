@@ -18,6 +18,10 @@ app.use(morgan('dev'))
 app.use(express.json())
 app.use(cors())
 
+app.get("/",(req,res) =>{
+    res.json("Hello");
+})
+
 //user routes
 app.use("/api/users", userRoute);
 app.use("/api/invoice", invoiceRoute);
