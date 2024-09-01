@@ -28,6 +28,7 @@ const invoiceSchema = new mongoose.Schema({
     phone: { type: String, required: true },
   },
   items: [itemSchema],
+  email :{ type: String, required: true },
   invoiceNumber: { type: String, required: true },
   amount: { type: Number, required: true },
   createdAt: { type: Date, default: Date.now },
